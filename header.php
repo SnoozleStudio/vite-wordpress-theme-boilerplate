@@ -1,1 +1,0 @@
-<?php echo 'hei goldon! te xi na cavara! Dio canavera!'; ?>
