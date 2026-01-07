@@ -71,10 +71,10 @@ add_action('wp_enqueue_scripts', function () {
 		$manifest = json_decode(file_get_contents($manifestPath), true);
 
 		// Check if the file is in the manifest before enqueuing
-		if (isset($manifest['src/scripts/main.js'])) {
-			wp_enqueue_script('theme', get_theme_file_uri('dist/' . $manifest['src/scripts/main.js']['file']));
+		if (isset($manifest['src/js/main.js'])) {
+			wp_enqueue_script('theme', get_theme_file_uri('dist/' . $manifest['src/js/main.js']['file']));
 			// Enqueue the CSS file
-			wp_enqueue_style('theme', get_theme_file_uri('dist/' . $manifest['src/scripts/main.js']['css'][0]));
+			wp_enqueue_style('theme', get_theme_file_uri('dist/' . $manifest['src/js/main.js']['css'][0]));
 		}
 	}
 });
