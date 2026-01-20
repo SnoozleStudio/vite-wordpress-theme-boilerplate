@@ -9,8 +9,10 @@
 		"lint": "biome check .",
 		"format": "biome format . --write"
 	},
-	"keywords": [],
-	"author": "",
+	"keywords": [
+		"WordPress"
+	],
+	"author": "Paolo Mason",
 	"license": "ISC",
 	"description": "Snoozle Studio WordPress theme boilerplate",
 	"devDependencies": {
