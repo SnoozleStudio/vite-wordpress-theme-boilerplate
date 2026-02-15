@@ -2,6 +2,8 @@
 
 <div id="primary" class="content-area">
 	<main id="main" class="site-main">
+		
+		<p><?php echo esc_html( get_field('test_field') ); ?></p>
 
 		<?php if (have_posts()) : ?>
 
