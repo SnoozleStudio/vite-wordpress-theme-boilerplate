@@ -14,19 +14,28 @@
 
 	<div id="page" class="site">
 
-		<?php bloginfo('name'); ?>
+		<header id="masthead" class="site-header">
+			🧠
+			<div class="site-branding">
+				<?php
+				if (is_front_page() || is_home()) : ?>
+					<h1 class="site-title"><a href="<?php echo esc_url(home_url('/')); ?>" rel="home"><?php bloginfo('name'); ?></a></h1>
+				<?php else : ?>
+					<p class="site-title"><a href="<?php echo esc_url(home_url('/')); ?>" rel="home"><?php bloginfo('name'); ?></a></p>
+				<?php
+				endif;
+				?>
 
-		<?php
-		if (has_nav_menu('primary')) {
-			wp_nav_menu(array(
-				// 'menu_id' => 'menu-primary',
-				// 'menu_class' => "",
-				// 'container'			=> false,
-				'theme_location' => 'primary',
-				// 'list_item_class'  => '',
-				// 'link_class'   => ''
-			));
-		}
-		?>
+			</div><!-- .site-branding -->
+
+			<nav id="site-navigation" class="main-navigation">
+				<?php
+				wp_nav_menu(array(
+					'theme_location' => 'primary',
+					// 'menu_id' => 'menu-main'
+				));
+				?>
+			</nav><!-- #site-navigation -->
+		</header><!-- #masthead -->
 
 		<div id="content" class="site-content">
